@@ -1,0 +1,29 @@
+<!-- Code for my sidebar -->
+<div class="_sidebar">
+    <div class="sidebar-header justify-content-center d-flex">
+        <a routerLink="/">
+        <img src="/images/logo.png" width="72" height="72" alt="logo">
+        </a>
+        <h1>MonPack</h1>
+    </div>
+    <nav class="nav flex-column">
+        <a class="nav-link" routerLink="/" >Home</a>
+        <a class="nav-link" routerLink="/signin">Sign In</a>
+        <a class="nav-link" routerLink="/add-driver">Add Driver</a>
+        <a class="nav-link" routerLink="/list-drivers">List Drivers</a>
+        <a class="nav-link" routerLink="/delete-driver">Delete Driver</a>
+        <a class="nav-link" routerLink="/update-driver">Update Driver</a>
+        <a class="nav-link" routerLink="/add-package">Add Package</a>
+        <a class="nav-link" routerLink="/list-packages">List Packages</a>
+        <a class="nav-link" routerLink="/delete-package">Delete Package</a>
+        <a class="nav-link" routerLink="/update-package">Update Package</a>
+        <a class="nav-link" routerLink="/statistics">Stats</a>
+        <a class="nav-link" routerLink="/translate">Translate</a>
+        <a class="nav-link" routerLink="/text-to-speech">Text To Speech</a>
+        <a class="nav-link" routerLink="/gen-ai">Gen AI</a>
+
+        @if (loggedIn) {
+            <a class="nav-link logout" (click)="logOut()">Log Out</a>
+        }
+    </nav>
+</div>

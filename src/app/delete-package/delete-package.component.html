@@ -1,0 +1,37 @@
+<div class="table-box">
+    <h1>All Packages</h1>
+    <table class="table" id="package-table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Description</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Allocated</th>
+            <th scope="col">Driver ID</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for(package of allPackages;track $index) {
+                <tr>
+                    <td>{{ package.package_id }}</td>
+                    <td>{{ package.package_title }}</td>
+                    <td>{{ package.package_weight | grams }}</td>
+                    <td>{{ package.package_destination }}</td>
+                    <td>{{ package.description }}</td>
+                    <td>{{ package.createdAt }}</td>
+                    <td>{{ package.isAllocated }}</td>
+                    <td>{{ package.driver_id | driverid }}</td>
+                    <td class="delete-cell">
+                        <button class="delete-btn" (click)="deletePackage($index)">
+                            <img src="/images/trashcan.svg" alt="deleteIcon" width="20" height="20">
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
+:root {
+    --monpack-blue: #34adff;
+    --monpack-peach: #f68c73;
+    --monpack-lightblue: #bae2ff;
+    --monpack-darkblue: #13399e;
+}
+
+body {
+    font-family: "Signika", sans-serif;
+}
+
+.btn .btn-primary {
+    border-radius: 20px;
+    background-color: var(--monpack-blue);
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    color: white;
+    background-color: var(--monpack-peach);
+}
+
+.sidebar {
+    padding-top: 20px;
+    border-right: 3px solid var(--monpack-blue);
+}
+
+.sidebar .nav-link {
+    border-radius: 20px;
+    background-color: var(--monpack-blue);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .nav-link:hover, .nav-link.active {
+    background-color: var(--monpack-peach);
+}
+
+.sidebar-header {
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar-header img {
+    margin-right: 10px;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+.form-box {
+    padding: 20px;
+    background-color: var(--monpack-lightblue);
+    border-radius: 20px;
+    /* width: 60%; */
+    margin-top: 20px;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: none;
+}
+
+.form-select {
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--monpack-blue);
+    border: none;
+    border-radius: 10px;
+}
+
+.table-box {
+    /* margin-left: 330px; */
+    padding: 20px;
+    /* margin-top: 20px; */
+    width: 100%;
+}
+
+.delete-driver-btn {
+    /* text-align: center; */
+    vertical-align: middle;
+}
+
+.delete-package-btn {
+    /* text-align: center; */
+    vertical-align: middle;
+}
+
+.footer {
+    /* padding-top: 20px; */
+    border-top: 3px solid var(--monpack-blue);
+}
+
+.card {
+    border: none;
+    background: var(--monpack-lightblue);
+    border-radius: 20px;
+    height: 100%;
+}
+
+.card-footer {
+    border-top: 2px solid var(--monpack-blue);
+}
+
+.delete-btn {
+    border: none;
+    background-color: white;
+}

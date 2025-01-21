@@ -1,0 +1,28 @@
+<div class="form-box w-75">
+    <h2>Update Driver</h2>
+    <form>
+        <div class="mb-3">
+            <label for="driver" class="form-label">Driver</label>
+            <select class="form-select" id="driver" name="driver" [(ngModel)]="driverId" required>
+                <option value="" disabled selected>Select Driver</option>
+                @for(driver of allDrivers;track $index) {
+                    <option value="{{ driver._id }}">{{ driver.driver_name }}</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="licence" class="form-label">New Licence</label>
+            <input autofocus type="text" class="form-control" id="licence" name="licence" [(ngModel)]="newLicence" placeholder="5 characters." required>
+        </div>
+        <div class="mb-3">
+            <label for="department" class="form-label">New Department</label>
+            <select class="form-select" id="department" name="department" [(ngModel)]="newDep" required>
+                <option value="" disabled selected>Select department</option>
+                <option value="food">Food</option>
+                <option value="furniture">Furniture</option>
+                <option value="electronic">Electronic</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" (click)="updateDriver()">Update Driver</button>
+    </form>
+</div>

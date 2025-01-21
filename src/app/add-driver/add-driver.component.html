@@ -1,0 +1,30 @@
+<div class="form-box w-75">
+    <h2>Add Driver</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input autofocus type="text" class="form-control" id="name" [(ngModel)]="driver.driver_name" name="name" placeholder="Between 3 and 20 characters." required>
+        </div>
+        <div class="mb-3">
+            <label for="department" class="form-label">Department</label>
+            <select class="form-select" id="department" [(ngModel)]="driver.driver_department" name="department" required>
+                <option value="" disabled selected>Select department</option>
+                <option value="food">Food</option>
+                <option value="furniture">Furniture</option>
+                <option value="electronic">Electronic</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="licence" class="form-label">Licence</label>
+            <input type="text" class="form-control" id="licence" [(ngModel)]="driver.driver_licence" name="licence" placeholder="5 characters." required>
+        </div>
+        <div class="mb-3">
+            <label for="active" class="form-label">Currently Active</label>
+            <select class="form-select" id="active" [(ngModel)]="driver.driver_isActive" name="active" required>
+                <option selected [value]="true">Yes</option>
+                <option [value]="false">No</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" (click)="addDriver()">Add Driver</button>
+    </form>
+</div>

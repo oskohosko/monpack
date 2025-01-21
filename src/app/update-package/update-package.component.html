@@ -1,0 +1,19 @@
+<div class="form-box w-75">
+    <h2>Update Package</h2>
+    <form>
+        <div class="mb-3">
+            <label for="package" class="form-label">Package</label>
+            <select class="form-select" id="package" name="package" [(ngModel)]="packageId" required>
+                <option value="" disabled selected>Select Package</option>
+                @for(package of allPackages;track $index) {
+                    <option [value]="package._id">{{ package.package_title }}</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="destination" class="form-label">New Destination</label>
+            <input autofocus type="text" class="form-control" id="destination" name="destination" [(ngModel)]="newDestination" placeholder="Between 5 and 15 characters." required>
+        </div>
+        <button class="btn btn-primary" (click)="updatePackage()">Update Package</button>
+    </form>
+</div>

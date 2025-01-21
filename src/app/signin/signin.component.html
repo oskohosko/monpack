@@ -1,0 +1,56 @@
+<div class="intro pt-3">
+    <h1>Sign In</h1>
+    <br>
+    <h4>If you already have an account, please login.</h4>
+    <h4>Otherwise, please sign up via the form on the right.</h4>
+    <br>
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <h1>Log In</h1>
+        <div class="form-box login">
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input autofocus type="text" class="form-control" name="username"
+                    [(ngModel)]="existingUserObj.username"
+                    placeholder="At least 6 characters." required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password"
+                    [(ngModel)]="existingUserObj.password"
+                    placeholder="Between 5 and 10 characters." required>
+                </div>
+                <button class="btn btn-primary" (click)="logIn()">Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-6">
+        <h1>Sign Up</h1>
+        <div class="form-box signin">
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input autofocus type="text" class="form-control" name="username"
+                    [(ngModel)]="newUserObj.username"
+                    placeholder="At least 6 characters." required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password"
+                    [(ngModel)]="newUserObj.password1"
+                    placeholder="Between 5 and 10 characters." required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" name="confirm"
+                    [(ngModel)]="newUserObj.password2"
+                    placeholder="Must match above password." required>
+                </div>
+                <button class="btn btn-primary" (click)="signUp()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>

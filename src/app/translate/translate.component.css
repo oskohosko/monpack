@@ -1,0 +1,10 @@
+.translate-container {
+    padding: 20px;
+    width: 70%;
+}
+
+#package-table {
+    &:hover {
+        cursor: pointer;
+    }
+}

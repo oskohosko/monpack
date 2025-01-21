@@ -1,0 +1,38 @@
+<div class="form-box w-75">
+    <h2>Add Package</h2>
+    <form>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input autofocus type="text" class="form-control" id="title" [(ngModel)]="package.package_title" name="title" placeholder="Between 3 and 15 characters." required>
+        </div>
+        <div class="mb-3">
+            <label for="weight" class="form-label">Weight</label>
+            <input type="number" class="form-control" id="weight" [(ngModel)]="package.package_weight" name="weight" placeholder="Greater than 0." required>
+        </div>
+        <div class="mb-3">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="destination" [(ngModel)]="package.package_destination" name="destination" placeholder="Between 5 and 15 characters." required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="package.description" name="description" placeholder="No more than 30 characters.">
+        </div>
+        <div class="mb-3">
+            <label for="allocated" class="form-label">Allocated</label>
+            <select class="form-select" id="allocated" [(ngModel)]="package.isAllocated" name="allocated" required>
+                <option [value]="true" selected>Yes</option>
+                <option [value]="false">No</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="driver" class="form-label">Driver</label>
+            <select class="form-select" id="driver" [(ngModel)]="package.driver_id" name="driver" required>
+                <option value="" disabled selected>Select Driver</option>
+                @for(driver of allDrivers;track $index) {
+                    <option [value]="driver._id.toString()">{{ driver.driver_name }}</option>
+                }
+            </select>
+        </div>
+        <button class="btn btn-primary" (click)="addPackage()">Add Package</button>
+    </form>
+</div>

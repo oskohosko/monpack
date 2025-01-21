@@ -1,0 +1,5 @@
+.logout {
+    &:hover {
+        cursor: pointer;
+    }
+}

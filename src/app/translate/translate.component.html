@@ -1,0 +1,49 @@
+<div class="translate-container">
+    <h1>Translate Description</h1>
+    <h3>Please select a language and a package</h3>
+    <div class="form-box w-50">
+        <label for="language" class="form-label"><h4>Language</h4></label>
+        <select class="form-select" id="language" [(ngModel)]="language" name="language" required>
+            <option value="" disabled selected>Select Language</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="it">Italian</option>
+        </select>
+    </div>
+    <div class="table-box form-box">
+        <h1>All Packages</h1>
+        <table class="table table-hover" id="package-table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Weight</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Description</th>
+                <th scope="col">Created At</th>
+                <th scope="col">Allocated</th>
+                <th scope="col">Driver ID</th>
+              </tr>
+            </thead>
+            <tbody>
+                @for(package of allPackages;track $index) {
+                    <tr (click)="translate($index)">
+                        <td>{{ package.package_id }}</td>
+                        <td>{{ package.package_title }}</td>
+                        <td>{{ package.package_weight | grams }}</td>
+                        <td>{{ package.package_destination }}</td>
+                        <td>{{ package.description }}</td>
+                        <td>{{ package.createdAt }}</td>
+                        <td>{{ package.isAllocated }}</td>
+                        <td>{{ package.driver_id | driverid }}</td>
+                    </tr>
+                }
+            </tbody>
+          </table>
+    </div>
+    <div class="form-box">
+        <h2>Translated Text</h2>
+        <p>{{ translatedText }}</p>
+    </div>
+</div>
+

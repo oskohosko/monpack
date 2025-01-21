@@ -1,0 +1,8 @@
+.view-driver {
+
+    transition: 0.3s color;
+    &:hover {
+        cursor: pointer;
+        color: #f68c73;
+    }
+}

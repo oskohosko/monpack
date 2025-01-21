@@ -1,0 +1,7 @@
+i {
+    transition: 0.3s color;
+    &:hover {
+        color: #f68c73;
+        cursor: pointer;
+    }
+}
